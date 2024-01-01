@@ -1,0 +1,98 @@
+\documentclass[12pt]{iopart}
+\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
+%Uncomment next line if AMS fonts required
+%\usepackage{iopams}
+
+% IOPart isn't compatible with AMSMath without these lines
+\expandafter\let\csname equation*\endcsname\relax
+\expandafter\let\csname endequation*\endcsname\relax
+\usepackage{amsmath}
+
+\usepackage{array}
+% \usepackage[raggedrightboxes]{ragged2e}
+\usepackage{booktabs, longtable}
+% \usepackage[
+% backend=biber,
+% style=alphabetic,
+% sorting=ynt
+% ]{biblatex}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Cleveref with Oxford comma
+\usepackage[capitalize]{cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
+
+% Widths of Appendix Table Columns
+\newcommand{\cwV}{3.2cm}
+\newcommand{\cwS}{1.7cm}
+\newcommand{\cwT}{2.5cm}
+\newcommand{\cwE}{3.3cm}
+\newcommand{\cwP}{3.2cm}
+\newcolumntype{V}{>{\raggedright}p{\cwV}}
+\newcolumntype{S}{>{\raggedright}p{\cwS}}
+\newcolumntype{T}{>{\raggedright}p{\cwT}}
+\newcolumntype{E}{>{\raggedright}p{\cwE}}
+\newcolumntype{P}{>{\raggedright}p{\cwP}}
+
+\newcommand{\appFootnote}{\footnotesize{***, **, and * represent statistical signiﬁcance at \(\textit{p} < 0.001\), \(\textit{p} < 0.01\), and \(\textit{p} < 0.05\), respectively.}}
+
+\begin{document}
+
+\title[]{Social and Economic Impact Analysis of Solar Mini-Grids in Rural Africa: A Cohort Study from Kenya and Nigeria}
+
+% Uncomment after double-blind review
+\author{A.T. Carabajal$^1$, A. Orsot$^2$, M.P.E. Moudio$^3$, T. Haggai$^4$, C.J. Okonkwo$^5$, G.T. Jarrard III$^1$, and N.S. Selby$^2$}
+\address{$^1$Renewvia Energy Corporation, 2951 Flowers Rd. S., Suite 217, Atlanta, GA 30341}
+\address{$^2$Renewvia Solar Ethiopia PLC, Addis Ababa, Ethiopia, Bole sub-city, Woreda 03, House No. 174/175, Saya Building, 5th Floor}
+\address{$^3$Department of Industrial Engineering and Operations Research, UC Berkeley, 2521 Hearst Ave, Berkeley, CA, USA, 94709}
+\address{$^4$Department of Anthropology, Gender and African Studies, University of Nairobi, PR98+JC9 University Way, Nairobi}
+\address{$^5$Planetary Health Management Mission Pathway, Entrepreneurial Leadership Program, Africa Leadership University Rwanda Campus,
+Bumbogo, Kigali, Innovation City, Kigali, Rwanda}
+\ead{\mailto{nicholas.selby@renewvia.com}}
+\vspace{10pt}
+\begin{indented}
+\item[]December 2023
+\end{indented}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\vspace{2pc}
+\noindent{\it Keywords}: mini-grids, sub-Saharan Africa, rural electrification, gender equality, health and safety, productivity, economic activity
+
+%
+% Uncomment for Submitted to journal title message
+\submitto{Environmental Research: Infrastructure and Sustainability}
+%
+% Uncomment if a separate title page is required
+\maketitle
+% 
+% For two-column output uncomment the next line and choose [10pt] rather than [12pt] in the \documentclass declaration
+%\ioptwocol
+%
+
+% Note: The max word count for Environmental Research: Infrastructure and Sustainability is 10,000 words.
+
+\input{sections/intro}
+\input{sections/methodology}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\input{sections/coi}
+\input{sections/funding}
+\input{sections/data}
+
+\section*{References}
+\bibliographystyle{iopart-num}
+\bibliography{main}
+\newpage
+\input{sections/appendix}
+\end{document}

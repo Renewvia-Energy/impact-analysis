@@ -1,0 +1,477 @@
+\section{Appendix}
+\label{sec:appendix}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/hs_pre_corr_plot.pdf}
+    \caption{Correlation Matrix of Household Pre-Survey Responses to 23 Numerical Questions}
+    \label{fig:corr-pre}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{images/hs_post_corr_plot.pdf}
+    \caption{Correlation Matrix of Household Post-Survey Responses to 17 Numerical Questions}
+    \label{fig:corr-post-hh}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{images/ci_post_corr_plot.pdf}
+    \caption{Correlation Matrix of C\&I Post-Survey Responses to 3 Numerical Questions}
+    \label{fig:corr-post-ci}
+\end{figure}
+
+\begin{landscape}
+    \begin{center}
+    \begin{longtable}[!ht]{VSTEPlll}
+        \caption{Statistical Testing Results for Gender Equality} \label{tab:app:gender} \\
+        
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value\\
+        \midrule
+        \endfirsthead
+
+        \multicolumn{8}{c}{\tablename\ \thetable{}, Continued} \\
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & \textit{p}-value\\
+        \midrule
+        \endhead
+
+        \bottomrule \multicolumn{8}{c}{\appFootnote Table continues on next page.}
+        \endfoot
+
+        \multicolumn{8}{c}{\appFootnote}
+        \endlastfoot
+        
+        \multirow[t]{3}{\cwV}{Increase in Schooling for Girls} & \multirow[t]{3}{\cwS}{Post} & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 1.824* & (0.425, 3.223) & 0.0140 \\
+        &       &        &         & Customer Count & 0.0680 & (0.1181 0.2541) & 0.448\\
+        &       &        &         & CAPEX (k USD)  & 0.4134** & (0.1793, 0.6475) & 0.0020\\
+        \hline
+            
+        \multirow[t]{3}{\cwV}{Increase in Schooling for Boys} & \multirow[t]{3}{\cwS}{Post} 
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 1.764* & (0.273, 3.256)& 0.0235\\
+        &       &        &         & Customer Count & 0.0674 & (-0.1252, 0.2601) & 0.467\\
+        &       &        &         & CAPEX (k USD)  & 0.4184** & (0.1722, 0.6645) & 0.0027\\
+        \hline
+            
+        \multirow[t]{4}{\cwV}{Water Collection Time} & \multirow[t]{4}{\cwS}{Paired}  
+        & Paired $t$-test & Mean Difference & RMG Presence & 0.1483*** & (0.0708, 0.2259) & 0.0002\\
+        &        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 2.455* & (0.2576, 4.652)& 0.0320\\
+        &        &        &                 & Customer Count & 0.0735 & (-0.2225, 0.3695) & 0.592\\
+        &        &        &                 & CAPEX (k USD) & 0.3348** & (0.0279, 0.6418) & 0.0354\\
+        \hline
+            
+        \multirow[t]{4}{\cwV}{Water Collection Responsibility (School-Aged vs. Not)} & \multirow[t]{4}{\cwS}{Paired}  
+                & McNemar & Odds Ratio & RMG Presence & 0.2894*** & (0.2104,0.3927) & 2e-16\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 4.019 &(-0.8265, 8.892) & 0.0942\\
+        &       &        &                 & Customer Count & 0.2279 &(-0.3544, 0.8117) & 0.4035\\
+        &       &        &                 & CAPEX (k USD) & 0.0333 & (-0.7445, 0.8111)& 0.9259\\
+        \hline
+            
+        \multirow[t]{4}{\cwV}{Cooking Fuel Collection Time} & \multirow[t]{4}{\cwS}{Paired}
+        & Paired $t$-test & Mean Difference & RMG Presence &0.3610*** &(0.2668, 0.4551)& 4.3e-13\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} &  \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.0440 & (-4.2914, 4.3795)&0.9824\\
+        &       &        &                 & Customer Count & -0.0134 & (-0.4792, 0.4524)& 0.9503\\
+        &       &        &                 & CAPEX (k USD) & 0.2247 & (-0.3544, 0.8037) &0.4076\\
+        \pagebreak
+            
+        Women-led Business Ownership & Paired 
+        & McNemar & Odds Ratio &RMG Presence & 0.7957 & (0.5783, 1.092) & 0.164\\
+        \hline
+        
+        \multirow[t]{4}{\cwV}{Employment Opportunity for Women} & \multirow[t]{4}{\cwS}{Post} 
+        & Likelihood-Ratio Test & Odds Ratio & Consumption (kWh) & 0.0036 & (-0.0071, 0.0126)& 0.4618\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -0.1333 & (-0.8511, 0.5845)& 0.6878\\
+        &       &        &          & Customer Count & 0.0697* & (0.0155, 0.1239) & 0.0168 \\
+        &       &        &          & CAPEX (k USD) & 0.0334 & (-0.0686, 0.1353) & 0.4825\\
+        \bottomrule
+    \end{longtable}
+    \end{center}
+\end{landscape}
+
+\pagebreak
+
+\begin{landscape}
+    \begin{center}
+    \begin{longtable}[ht]{VSTEPlll}
+        \caption{Statistical Testing Results for Productivity} \label{tab:app:productivity} \\
+        
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value\\
+        \midrule
+        \endfirsthead
+
+        \multicolumn{8}{c}{\tablename\ \thetable{}, Continued} \\
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value \\
+        \midrule
+        \endhead
+
+        \bottomrule \multicolumn{8}{c}{\appFootnote Table continues on next page.}
+        \endfoot
+
+        \multicolumn{8}{c}{\appFootnote}
+        \endlastfoot
+        
+        Light Hours & Paired 
+        & Paired \textit{t-}test &Mean Difference &RMG Presence & -3.1211*** & (-3.5087,-2.7336) & 2e-16 \\
+        \hline
+        
+        \multirow[t]{4}{\cwV}{Power Source (Clean vs Unclean)} & \multirow[t]{4}{\cwS}{Paired} 
+        & McNemar & Odds Ratio & RMG Presence & 0.1449*** & (0.0954, 0.2132) & 2e-16 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -1.398 & (-6.4602, 3.6642)& 0.5521\\
+        &       &        &          & Customer Count &0.4686* & (0.0235,  0.9137) & 0.0409\\
+        &       &        &          & CAPEX (k USD)  & 0.2525 & (-0.4390, 0.9440) & 0.4348 \\
+        \hline
+            
+        \multirow[t]{4}{\cwS}{Appliances Count} & \multirow[t]{4}{\cwT}{Paired} 
+        & Paired $t$-test & Mean Difference & RMG Presence & -1.5867*** & (-1.7789, -1.3945) & 2e-16 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.2424 & (-6.8040, 7.2888)& 0.9404 \\
+        &       &        &          & Customer Count & 0.8710** & (0.4270, 1.3149) & 0.0014 \\
+        &       &        &          & CAPEX (k USD) & 0.6005 & (-0.2788, 0.1480) & 0.1591 \\
+        \hline
+    
+        \multirow[t]{4}{\cwV}{Phone Charging Travel Distance} & \multirow[t]{4}{\cwS}{Paired} 
+        & Wilcoxon & Median & RMG Presence & 0.9999*** & (0.9999, 1.0000) & 2e-16 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -4.410  & (-10.7694, 1.9484) &0.1533\\
+        &       &        &          & Customer Count & 0.0901 &(-0.6679, 0.8480) & 0.7965\\
+        &       &        &          & CAPEX (k USD) & -0.1692 &(-0.1142, 0.8034) & 0.7064\\
+        \hline
+    
+        \multirow[t]{4}{\cwV}{Water Collection Travel Distance} & \multirow[t]{4}{\cwS}{Paired} 
+        & Wilcoxon & Median & RMG Presence & 6.5e-6* & (-5.2e-5, 6.7e-7) & 0.0429 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.8506 & (-2.0535, 3.7547) & 0.5287 \\
+        &       &        &          & Customer Count & 0.0472 & (-0.2697, 0.3641) & 0.7470\\
+        &       &        &          & CAPEX (k USD) & 0.2094 & (-0.1738, 0.5925) &0.2513 \\
+        \hline
+    
+        Clinic Travel Distance & Paired 
+        & Wilcoxon & Median & RMG Presence & -3.6e-5 & (-2.8e-5, 6.1e-7) & 0.9765\\
+        \hline
+            
+        \multirow[t]{3}{\cwV}{Academic Performance (Households)} & \multirow[t]{3}{\cwS}{Post} 
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 1.4668 & (-0.1765, 3.1100) & 0.0765\\
+        &       &        &          & Customer Count & 0.1874* & (0.0139, 0.3609) & 0.0361\\
+        &       &        &          & CAPEX (k USD) & 0.3049* & (0.2175, 0.5880) & 0.0367 \\
+        \pagebreak
+            
+        \multirow[t]{3}{\cwV}{Academic Performance (Schools)} & \multirow[t]{3}{\cwS}{Post} 
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.2344** & (0.0803, 0.3885) &0.0074\\
+        &       &        &          & Customer Count & -0.0089 & (-0.0355, 0.0178)& 0.4712\\
+        &       &        &          & CAPEX (k USD) & 0.0201  & (-0.017, 0.0572) & 0.2514\\
+        \hline
+            
+        \multirow[t]{3}{\cwV}{Hours of Operations} & \multirow[t]{3}{\cwS}{Post} 
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 1.0059 & (-0.0224, 2.0343) & 0.0545\\
+        &       &        &          & Customer Count & 0.0872 & (-0.0439, 0.2183) & 0.1758\\
+        &       &        &          & CAPEX (k USD) & 0.0568 & (-0.1396, 0.2533) & 0.5449\\
+        \hline
+            
+        \multirow[t]{3}{\cwV}{Employment Opportunity For All} & \multirow[t]{3}{\cwS}{Post} 
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.0348 & (-0.3229, 0.3925)& 0.8344\\
+        &       &        &          & Customer Count & 0.0382* & (0.0090, 0.0674) & 0.0149\\
+        &       &        &          & CAPEX (k USD) & 0.0039 & (-0.0511, 0.0589) & 0.8783\\
+        \hline
+            
+        \multirow[t]{3}{\cwV}{Change in Products/Services} & \multirow[t]{4}{\cwS}{Post} 
+        & Likelihood-Ratio Test & Odds Ratio & Consumption (kWh) & 0.0037 & (-0.0045, 0.0133)& 0.3808\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.8667** &(0.3663, 1.3671) & 0.0023\\
+        &       &        &          & Customer Count & 0.0376 & (-0.0435, 0.1187) & 0.3374\\
+        &       &        &          & CAPEX (k USD) & 0.0743 & (-0.0369, 0.1856) & 0.1737\\
+        
+        \bottomrule
+    \end{longtable}
+    \end{center}
+\end{landscape}
+
+
+\pagebreak
+
+\begin{landscape}
+    \begin{center}
+    \begin{longtable}[ht]{VSTEPlll}
+        \caption{Statistical Testing Results for Health} \label{tab:app:health} \\
+        
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value\\
+        \midrule
+        \endfirsthead
+
+        \multicolumn{8}{c}{\tablename\ \thetable{}, Continued} \\
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value \\
+        \midrule
+        \endhead
+
+        \bottomrule \multicolumn{8}{c}{\appFootnote Table continues on next page.}
+        \endfoot
+
+        \multicolumn{8}{c}{\appFootnote}
+        \endlastfoot
+        
+        \multirow[t]{4}{\cwV}{Access to Clean Drinking Water}  & \multirow[t]{4}{\cwS}{Paired} 
+        & McNemar & Odds Ratio & RMG Presence & 1.8689*** & (1.3577, 2.5941) & 0.0001 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -1.364 & (-6.0004, 3.2721) &0.5269 \\
+        &       &        &          & Customer Count & -0.1371 & (-0.6367, 0.3624)& 0.5545 \\
+        &       &        &          & CAPEX (k USD) & -0.1735 & (-0.8175, 0.4706) & 0.5618 \\
+        \hline
+            
+        \multirow[t]{4}{\cwV}{Kerosene Lamps} & \multirow[t]{4}{\cwS}{Paired} 
+        & Paired $t$-test & Mean Difference & RMG Presence & 0.3627*** & (0.1658, 0.5597) & 0.0004 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -2.148 & (-6.2876, 1.9919) &0.2745\\
+        &       &        &          & Customer Count & 0.0951 & (-0.3739, 0.5639) & 0.6612\\
+        &       &        &          & CAPEX (k USD) & -0.3178 &(-0.8855, 0.2499) & 0.2407\\
+        \hline
+            
+        \multirow[t]{3}{\cwV}{Kerosene Lamp Usage} & \multirow[t]{3}{\cwS}{Paired}       
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -3.6820 &(-8.4022, 1.0379) &0.1171\\
+        &       &        &          & Customer Count &0.7038**  & (0.2907, 1.1170) & 0.0025 \\
+        &       &        &          & CAPEX (k USD) & -0.2940 & (-1.1234, 0.5355)&0.4598 \\
+        \hline
+        
+        \multirow[t]{3}{\cwV}{New Health Services} & \multirow[t]{3}{\cwS}{Paired}       
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.0262 & (-0.1488, 0.2012) & 0.7335 \\
+        &       &        &          & Customer Count & 0.0062 & (-0.0125, 0.0249) & 0.4585\\
+        &       &        &          & CAPEX (k USD) & -0.0016 & (-0.0318, 0.0285) & 0.9007\\
+        \hline
+        
+        Clinic Access To Electricity  & Paired 
+        & McNemar & Odds Ratio &RMG Presence &117*** & (32.03, 971.8) & 2e-16\\
+        \hline
+        
+        Clinic Access To Refrigeration  & Paired 
+        & McNemar & Odds Ratio &RMG Presence  & 11.895*** & ( 7.4418, 20.126)& 2e-16 \\
+        \hline
+        
+        \multirow[t]{4}{\cwV}{Better Access to Healthcare} & \multirow[t]{4}{\cwS}{Post}
+        & Likelihood-Ratio Test & Log Odds & Consumption (kWh) & -0.0174 & (-0.0513, 0.0316) & 0.4269 \\
+        & & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -0.949 & (-5.0190, 3.1209) &0.6264\\
+        &       &        &          & Customer Count &0.7576*** & (0.5821, 0.9331) & 1.48e-7\\
+        &       &        &          & CAPEX (k USD) & 0.1364 & (-0.5194, 0.7922) & 0.6623\\
+
+        \multirow[t]{3}{\cwV}{Self-Reported Improvement} & \multirow[t]{3}{\cwS}{Post} 
+        & Likelihood-Ratio Test & Log Odds & Consumption (kWh) & -0.0140 & (-0.0379, 0.0089)& 0.2299\\
+        & & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.7911 & (-1.8564, 3.4386) &0.5338\\
+        &       &        &          & Customer Count &0.4694*** & (0.3253, 0.6135) & 4.72e-6\\
+        &       &        &          & CAPEX (k USD) & 0.2127 & (-0.2632, 0.6886) & 0.3540\\
+    
+        \bottomrule
+    \end{longtable}
+    \end{center}
+\end{landscape}
+
+\pagebreak
+
+\begin{landscape}
+    \begin{center}
+    \begin{longtable}[ht]{VSTEPlll}
+        \caption{Statistical Testing Results for Safety} \label{tab:app:safety} \\
+        
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value\\
+        \midrule
+        \endfirsthead
+
+        \multicolumn{8}{c}{\tablename\ \thetable{}, Continued} \\
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value \\
+        \midrule
+        \endhead
+
+        \bottomrule \multicolumn{8}{c}{\appFootnote Table continues on next page.}
+        \endfoot
+
+        \multicolumn{8}{c}{\appFootnote}
+        \endlastfoot
+        
+        \multirow[t]{4}{\cwV}{Feeling Unsafe Due to Unsafe Travel} & \multirow[t]{4}{\cwS}{Paired} 
+        & McNemar & Odds Ratio & RMG Presence & 0.1759*** & (0.1020, 0.2882) & 2.7e-16\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 1.0250 & (-1.7876, 3.8377) &0.4357\\
+        &       &        &          & Customer Count & -0.0609 & (-0.3700, 0.2482) & 0.6699\\
+        &       &        &          & CAPEX (k USD) & 0.1351 & (-0.2555, 0.5257) &0.4587\\
+        \hline
+        
+        \multirow[t]{4}{\cwV}{Feeling Unsafe Due to No Community Lighting} & \multirow[t]{4}{\cwS}{Paired} 
+        & McNemar & Odds Ratio & RMG Presence &0.4094*** &(0.2988, 0.5550)&1.1e-9\\ 
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &-3.145&(-7.5491, 1.2582) & 0.1426 \\
+        &       &        &          & Customer Count &0.3992  &(-0.0497, 0.8482) & 0.0757 \\
+        &       &        &          & CAPEX (k USD) & -0.1154 &(-0.7931, 0.5623) & 0.7123 \\
+        \hline
+    
+        \multirow[t]{4}{\cwV}{Feeling Unsafe Due to Potential Theft}  & \multirow[t]{4}{\cwS}{Paired}
+        & McNemar & Odds Ratio &RMG Presence & 5.925*** & (4.2245 8.5047) & 2e-16 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.9278 &(-0.7589, 2.6144) &0.2484\\
+        &       &        &          & Customer Count & -0.0562 &(-0.2465, 0.1341) & 0.5252\\
+        &       &        &          & CAPEX (k USD) & 0.1628 &(-0.0599, 0.3854) & 0.1344\\
+        \hline
+        
+        \multirow[t]{4}{\cwV}{Presence of Home Exterior Lights} & \multirow[t]{4}{\cwS}{Paired} 
+        & McNemar & Odds Ratio &RMG Presence & 4.1395*** &(2.9526, 5.9187) & 2e-16 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &-1.141  &(-5.8565, 3.5753) &0.6018\\
+        &       &        &          & Customer Count & 0.3410 &(-0.1134, 0.7955) & 0.1255\\
+        &       &        &          & CAPEX (k USD) & 0.1380 &(-0.5171, 0.7932) & 0.6489\\
+    
+        \bottomrule
+    \end{longtable}
+    \end{center}
+\end{landscape}
+
+\begin{landscape}
+    \begin{center}
+    \begin{longtable}[ht]{VSTEPlll}
+        \caption{Statistical Testing Results for Economic Activity} \label{tab:app:econ} \\
+        
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value\\
+        \midrule
+        \endfirsthead
+
+        \multicolumn{8}{c}{\tablename\ \thetable{}, Continued} \\
+        \toprule
+        Variable & Sample & Test & Estimate & Predictor & Result & 95\% CI & $p$-value \\
+        \midrule
+        \endhead
+
+        \bottomrule \multicolumn{8}{c}{\appFootnote Table continues on next page.}
+        \endfoot
+
+        \multicolumn{8}{c}{\appFootnote}
+        \endlastfoot
+        
+        \multirow[t]{4}{\cwV}{Average Household Income - Nigeria} & \multirow[t]{4}{\cwS}{Paired} 
+        & Paired $t$-test & Mean Difference & RMG Presence & 24080*** & (19583, 28574) & 2e-16 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &0.3541 &(-5.4645, 6.1727) &0.8179 \\
+        &       &        &          & Customer Count & 0.0896 & (-0.3758, 0.5550) & 0.4946\\
+        &       &        &          & CAPEX (k USD) & -0.2976 & (-8.4745, 7.8792) & 0.7242 \\
+        \hline
+        
+        \multirow[t]{4}{\cwV}{Average Household Income - Kenya} & \multirow[t]{4}{\cwS}{Paired} 
+        & Paired $t$-test & Mean Difference & RMG Presence & -13037*** & (-11375, -14698) & 2e-16 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 1.0640 &(-4.4101, 6.5380) &0.6511\\
+        &       &        &          & Customer Count & 0.4714** & (0.1781, 0.7648) & 0.0077\\
+        &       &        &          & CAPEX (k USD) & 0.0867 & (-0.6213, 0.7946) &0.7747\\
+        \hline
+    
+    
+        \multirow[t]{3}{\cwV}{Household Income Signed Change} & \multirow[t]{3}{\cwS}{Post}
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.7668 & (-0.7463, 2.2798) & 0.2971\\
+        &       &        &          & Customer Count & 0.1416 &(-0.0130, 0.2963) &0.0698 \\
+        &       &        &          & CAPEX (k USD) &0.1492  &(-0.0065, 0.3050) & 0.0590\\
+        \hline
+        
+        \multirow[t]{3}{\cwV}{Business Earnings Signed Change} & \multirow[t]{3}{\cwS}{Post} 
+        & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &1.1001* &(0.1734, 2.0269) & 0.0233\\
+        &       &        &          & Customer Count & 0.0904 &(-0.0325, 0.2133) & 0.1370\\
+        &       &        &          & CAPEX (k USD) & 0.0894 &(-0.0928, 0.2717) & 0.3105\\
+        \hline
+            
+        \multirow[t]{4}{\cwV}{Business Ownership} & \multirow[t]{4}{\cwS}{Paired} 
+        & McNemar & Odds Ratio &RMG Presence & 6.1111*** &(2.9962, 14.0661) & 3.5e-5 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -0.4382 &(-5.8828, 5.0065) &0.8613\\
+        &       &        &          & Customer Count & 0.1741 & (-0.3990, 0.7471) & 0.5139\\
+        &       &        &          & CAPEX (k USD) & -0.4673 &(-1.14676, 0.2122) & 0.1564\\
+        \hline
+    
+        \multirow[t]{4}{\cwV}{Phone Charging Cost - Nigeria} & \multirow[t]{4}{\cwS}{Paired} 
+        & Sign & Median &RMG Presence &-4*** & (-5, -4) & 9e-52\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 7.729& (-0.0621, 15.5200) & 0.0507\\
+        &       &        &          & Customer Count & 0.7266* & (0.2671, 1.1861) & 0.0209\\
+        &       &        &          & CAPEX (k USD) &0.7277 & (-4.4249, 5.8804) & 0.3236\\
+        \pagebreak
+        
+        \multirow[t]{4}{\cwV}{Phone Charging Cost - Kenya} & \multirow[t]{4}{\cwS}{Paired} 
+        & Sign & Median &RMG Presence &-1** & (-1, -1) & 0.0022\\
+        &      & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &-4.4173 &(-11.3411, 2.5066) & 0.3741\\
+        &       &        &          & Customer Count &-0.2931 & (-1.0558, 0.4696) & 0.3834\\
+        &       &        &          & CAPEX (k USD) &-0.6168 & (-1.4672, 0.2335) & 0.1263\\
+        \hline
+        
+        % \multirow[t]{3}{\cwV}{Phone Charging Cost} & \multirow[t]{3}{\cwS}{Paired} 
+        % & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &-5.5180  &(-12.7534, 1.7173) &0.1201\\
+        % &       &        &          & Customer Count & 0.2104  &(-0.6597, 1.0805) & 0.6018\\
+        % &       &        &          & CAPEX (k USD) & -1.804e-5  &(-0.0012, 0.0011) & 0.9725\\
+    
+        \multirow[t]{4}{\cwV}{Appliances Charging Cost - Nigeria} & \multirow[t]{4}{\cwS}{Paired} 
+        & Sign & Median &RMG Presence &-3*** & (-3, -3) & 1e-50\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &7.4115 &(-1.9588, 16.7818) & 0.0765\\
+        &       &        &          & Customer Count &0.7266 & (0.4684, 0.9848) & 0.0067\\
+        &       &        &          & CAPEX (k USD) &0.7450 & (-9.764, 11.254) & 0.5332 \\
+        \hline
+        
+        \multirow[t]{4}{\cwV}{Appliances Charging Cost - Kenya} & \multirow[t]{4}{\cwS}{Paired} 
+        & Sign & Median &RMG Presence &-1*** & (-1,-1) & 2.60e-6\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &-4.0440 &(-11.5460, 3.4581) & 0.2353\\
+        &       &        &          & Customer Count &-0.2322 & (-1.0476, 0.5833) & 0.5121\\
+        &       &        &          & CAPEX (k USD) &-0.6206 & (-1.5169, 0.2757) & 0.1412\\
+        \hline
+            
+        % \multirow[t]{3}{\cwV}{Appliances Charging Cost} & \multirow[t]{3}{\cwS}{Paired} 
+        % & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -5.404 & (-12.8368, 2.0287)&0.1363\\
+        % &       &        &          & Customer Count & 0.2549 &(-0.6243, 1.1342) & 0.5328\\
+        % &       &        &          & CAPEX (k USD) & 2.9e-5 &(-0.0012, 0.0011) & 0.9566\\
+        % \hline
+    
+        \multirow[t]{4}{\cwV}{Cooking Energy Cost - Nigeria} & \multirow[t]{4}{\cwS}{Paired} 
+        & Wilcoxon & Median &RMG Presence &1.49*** & (0.99, 1.5) & 6e-12\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 4.560 & (-23.6620, 32.7829) & 0.5588\\
+        &       &        &          & Customer Count &0.6825 & (-1.293, 2.658) & 0.2755\\
+        &       &        &          & CAPEX (k USD) & -0.3187 & (-43.6965, 43.059) & 0.9407\\
+        \hline
+        
+        \multirow[t]{4}{\cwV}{Cooking Energy Cost - Kenya} & \multirow[t]{4}{\cwS}{Paired} 
+        & Wilcoxon & Median &RMG Presence &-4.89e-5** & (-0.99, -1.91e-5) & 0.001442\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &0.2391 &(-2.2511, 2.7294
+) &0.8221\\
+        &       &        &          & Customer Count &0.0074 & (-0.2414, 0.2562) &0.9442 \\
+        &       &        &          & CAPEX (k USD) &0.0295 & (-0.2891, 0.3481) &0.8285 \\
+        \hline
+    
+        % \multirow[t]{3}{\cwV}{Cooking Energy Cost} & \multirow[t]{3}{\cwS}{Paired} 
+        % & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & -2.6500 &(-8.7325, 3.4315) &0.3544\\
+        % &       &        &          & Customer Count & 0.3666 &(-0.2664, 0.9996) & 0.2260\\
+        % &       &        &          & CAPEX (k USD) & 0.0003 &(-0.0005, 0.0012) & 0.4189\\
+        % \hline
+    
+        \multirow[t]{4}{\cwV}{Kerosene Lamps Cost - Nigeria} & \multirow[t]{4}{\cwS}{Paired}  
+        & Sign & Median &RMG Presence &-3*** & (-4, -3) & 1e-20\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 6.0134 &(-2.674, 14.701) & 0.0967\\
+        &       &        &          & Customer Count & 0.6042** & (0.4334, 0.7749) & 4e-3 \\
+        &       &        &          & CAPEX (k USD) &0.734 & (-11.1702, 12.6383) & 0.5769\\
+        \pagebreak
+        
+        \multirow[t]{4}{\cwV}{Kerosene Lamps Cost - Kenya} & \multirow[t]{4}{\cwS}{Paired} 
+        & Sign & Median &RMG Presence &-1*** & (-1, -1) & 5e-12\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &-3.1656 & (-9.5667, 3.2356) &  0.2718\\
+        &       &        &          & Customer Count &-0.1546 & (-0.8480, 0.5388) &0.6051\\
+        &       &        &          & CAPEX (k USD) & -0.6074 & (-1.2898, 0.0750) & 0.0723\\
+        \hline
+    
+        % \multirow[t]{3}{\cwV}{Kerosene Lamps Cost} & \multirow[t]{3}{\cwS}{Paired} 
+        % & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &-4.0600  &(-9.9694, 1.8484) &0.1567\\
+        % &       &        &          & Customer Count &  0.2202 &(-0.4680, 0.9084) & 0.4921\\
+        % &       &        &          & CAPEX (k USD) & -0.0001 &(-0.0010, 0.0008) & 0.7992\\
+        
+    
+        \multirow[t]{4}{\cwV}{Water Cost - Nigeria} & \multirow[t]{4}{\cwS}{Paired} 
+        & Sign & Median &RMG Presence &-2*** & (-2, -2) & 3e-4 \\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &2.2100 &(-0.6804, 5.1004) & 0.0812\\
+        &       &        &          & Customer Count &0.2098* & (0.0157, 0.4039) &  0.0433\\
+        &       &        &          & CAPEX (k USD) &0.1136 & (-1.138, 1.365) & 0.4547 \\
+        \hline
+        \multirow[t]{4}{\cwV}{Water Cost - Kenya} & \multirow[t]{4}{\cwS}{Paired} 
+        & Sign & Median &RMG Presence &-0.5 & (-1.0, -1.7e-5) & 0.0062\\
+        &       & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) &0.3696 & (-3.8569, 4.5962) &0.8376\\
+        &       &        &          & Customer Count &-0.1981 & (-0.5710, 0.1748) & 0.2414\\
+        &       &        &          & CAPEX (k USD) &0.1584 & (-0.3607, 0.6774) &0.4835\\
+        \hline
+    
+        % \multirow[t]{3}{\cwV}{Water Cost} & \multirow[t]{3}{\cwS}{Paired}
+        % & \multirow[t]{3}{\cwT}{Linear Regression} & \multirow[t]{3}{\cwE}{Slope of Regression Line} & PV Size (kWp) & 0.2879 &(-2.1776, 2.7534) &0.8000\\
+        % &       &        &          & Customer Count & -0.0632 & (-0.3253, 0.1989)& 0.6027\\
+        % &       &        &          & CAPEX (k USD) & 0.0002 &(-0.0001, 0.0005) & 0.1843\\
+    
+        \bottomrule
+    \end{longtable}
+    \end{center}
+\end{landscape}
