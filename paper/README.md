@@ -1,6 +1,6 @@
 To compile, you will need to have LaTeX installed on your machine:
 ```
-$ sudo apt install texlive-latex-extra
+sudo apt install texlive-latex-extra
 ```
 
 After installation, run the following commands to compile:
