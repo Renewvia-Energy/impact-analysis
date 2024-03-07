@@ -9,6 +9,8 @@ report:
 	bibtex $(DOCNAME).aux
 	pdflatex $(DOCNAME).tex
 	pdflatex $(DOCNAME).tex
+	@echo "Word Count:"
+	detex $(DOCNAME).tex | wc -w
 
 view: report
 	open $(DOCNAME).pdf
