@@ -1,9 +1,9 @@
 \section{Methodology}
 \label{sec:methodology}
 \subsection{Project Description and Data Collection}
-Between 2021 and 2023, we installed solar mini-grids in and conducted a study across 22 communities in Nigeria and Kenya to assess if there were any significant changes regarding the quality of life of the populations connected to their mini-grids. \textcolor{violet}{The capacity of the mini-grids varied, starting from 6.24 kWp with 14.8 kWh of battery storage, up to 541 kWp accompanied by 1.10 MWh of battery storage.} To collect the necessary information, we used surveys composed of semi-structured questionnaires that captured quantitative and qualitative data such as demographics, access to education for children, access to clean drinking water, creation of jobs and businesses, and economic opportunities for women, as well as many others. Primary data was collected from a variety of respondents categorized either as households or commercial and institutional organizations (e.g. businesses, schools, clinics, etc.) through face-to-face interviews by independent, third-party field enumerators.
+Between 2021 and 2023, we installed solar mini-grids in and conducted a study across 22 communities in Nigeria and Kenya to assess if there were any significant changes regarding the quality of life of the populations connected to their mini-grids. \textcolor{purple}{The capacity of the mini-grids varied, starting from 6.24 kWp with 14.8 kWh of battery storage, up to 541 kWp accompanied by 1.10 MWh of battery storage.} To collect the necessary information, we used surveys composed of semi-structured questionnaires that captured quantitative and qualitative data such as demographics, access to education for children, access to clean drinking water, creation of jobs and businesses, and economic opportunities for women, as well as many others. Primary data was collected from a variety of respondents categorized either as households or commercial and institutional organizations (e.g. businesses, schools, clinics, etc.) through face-to-face interviews by independent, third-party field enumerators.
 
-This study examined the impact of the mini-grids on key performance indicators (KPIs) by comparing responses before and one year after installing a solar mini-grid in the respective communities. Due to the lack of data from communities without a solar mini-grid, only pre-and post-treatment data have been used in this study. The pre-treatment survey was conducted between 2021 and 2022, while the post-treatment survey was conducted between 2022 and 2023.
+This study examined the impact of the mini-grids on \textcolor{purple}{the} key performance indicators (KPIs) by comparing responses before and one year after installing a solar mini-grid in the respective communities. Due to the lack of data from communities without a solar mini-grid, only pre-and post-treatment data have been used in this study. The pre-treatment survey was conducted between 2021 and 2022, while the post-treatment survey was conducted between 2022 and 2023.
 
 \subsection{Survey Design} 
 This study aimed to investigate the impact of installing mini-grids in rural communities in Sub-Saharan Africa, focusing on five KPIs: gender equality, productivity, safety, health, and economic growth.
@@ -12,7 +12,7 @@ A cohort study design was employed, enabling an analysis of the mini-grid's effe
 
 The survey was developed based on literature review and global KPIs relevant to mini-grid stakeholders. No pilot testing was conducted. A diverse set of question types was utilized, including demographic queries, Likert-scale items, interval and quantity-specific questions, and open-ended questions. This mix aimed to capture both quantitative and qualitative aspects of the mini-grid's impact. To ensure reliability and validity, the survey employed clear, concise, and neutrally-worded questions. Professional survey administrators were engaged to maintain consistency and integrity in data collection.
 
-Surveys were carried out in person by independent, third-party surveyors who used \textcolor{violet}{CommCare} electronic forms to minimize transcription bias. Participants were briefed and consent obtained through signed forms, ensuring ethical compliance. No incentives were offered.
+Surveys were carried out in person by independent, third-party surveyors who used \textcolor{purple}{CommCare} electronic forms to minimize transcription bias. Participants were briefed and consent obtained through signed forms, ensuring ethical compliance. No incentives were offered.
 
 Data analysis involved various statistical tests, including paired $t$-tests, Wilcoxon signed-rank tests, and linear regression, among others, using R software. This comprehensive approach aimed to rigorously assess the mini-grid's impact across multiple dimensions.
 
@@ -22,48 +22,48 @@ Data analysis involved various statistical tests, including paired $t$-tests, Wi
 The paired samples $t$-test is a parametric statistical method to determine whether the mean difference of paired measurements is 0 or not. It follows the assumptions that the observations are independent, the paired differences are approximately normally distributed, and there are no extreme outliers in the differences. The paired samples $t$-test includes the following null and alternative hypotheses:
 \begin{equation}
 \begin{array}{c}
-    H_0 : \mu_d = 0 \\
-    H_1 :  \mu_d \neq 0
+	H_0 : \mu_d = 0 \\
+	H_1 :  \mu_d \neq 0
 \end{array}
 \end{equation}
 where $\mu_d$ is the mean of differences from the pairs, $H_0$ the null hypothesis stating the mean paired difference is equal to 0, and $H_1$ the alternative hypothesis stating that the mean paired difference does not equal 0.
 
 The paired samples $t$-test utilizes the $t$ statistic
 \begin{equation}
-    t = \frac{\bar{d}\sqrt{n}}{\sigma_d}
+	t = \frac{\bar{d}\sqrt{n}}{\sigma_d}
 \end{equation}
-where $\bar{d}$ is the mean value of the differences between paired samples, $\sigma_d$ the standard deviation the differences between paired samples, and $n$ is the sample size.
-     
+where $\bar{d}$ is the mean value of the differences between paired samples, $\sigma_d$ the standard deviation \textcolor{purple}{of} the differences between paired samples, and $n$ is the sample size.
+
 \subsubsection{Wilcoxon Signed-Rank Test}
 \hfill \break
-The Wilcoxon signed-rank test is a statistical method to compare two dependent samples from matched or paired data. While it does assume the distribution of the differences is symmetric, it does not assume any specific distribution of the samples themselves and serves as a non-parametric equivalent to the paired samples $t$-test, particularly applicable to categorical variables with meaningful differences between ranks (i.e. ordinal data). The test is evaluated taking into account both the sign and magnitudes of observed differences. The Wilcoxon signed-rank test is implemented using the null and alternative hypotheses:
+The Wilcoxon signed-rank test is a statistical method to compare two dependent samples from paired data. While it assume\textcolor{purple}{s} the distribution of the differences is symmetric, it does not assume any specific distribution of the samples themselves and serves as a non-parametric equivalent to the paired samples $t$-test, particularly applicable to categorical variables with meaningful differences between ranks (i.e. ordinal data). The test is evaluated taking into account both the sign and magnitudes of observed differences. The Wilcoxon signed-rank test is implemented using the null and alternative hypotheses:
 \begin{equation}
 \begin{array}{c}
-    H_0: \mathrm{M} = 0   \\
-    H_1: \mathrm{M} \neq 0
+	H_0: \mathrm{M} = 0   \\
+	H_1: \mathrm{M} \neq 0
 \end{array}
 \end{equation}
 where M is the median of the paired differences, $H_0$ the null hypothesis stating no difference between paired observations, and $H_1$ the alternative hypothesis stating a significant difference between paired observations.
 
 The Wilcoxon signed-rank test utilizes the \textit{W} statistic
 \begin{equation}
-     W = \mathrm{min}(T_-, T_+)
+	 W = \mathrm{min}(T_-, T_+)
 \end{equation}
 where $T_-$ is the sum of the negative differences and $T_+$ is the sum of the positive differences.
 
 \subsubsection{Sign Test}
 \hfill \break
-The Sign test is a non-parametric statistical method designed to determine if two dependent samples, ordered in pairs, are of equal magnitudes. Unlike the Wilcoxon signed-rank test, it does not assume symmetry and considers only the direction of change, making it suitable for categorical variables where arithmetic differences are not meaningful. It is often viewed as a less powerful test since it does not measure the magnitude of differences between pairs, but it is still useful for assessing the significance of observed changes. Although the Wilcoxon signed-rank test and the Sign test operate similarly, the choice between them depends on the data characteristics. The Wilcoxon signed-rank test is preferable for differences that are approximately normally distributed and have meaningful magnitudes, while the Sign test is more appropriate in other cases. The sign test is implemented using the null and alternative hypotheses:
+The Sign test is a non-parametric statistical method designed to determine if two dependent samples, ordered in pairs, are of equal magnitudes. Unlike the Wilcoxon signed-rank test, it does not assume symmetry and considers only the direction of change, making it suitable for categorical variables where arithmetic differences are not meaningful. It is often viewed as a less powerful test since it does not measure the magnitude of differences between pairs, but it is still useful for assessing the significance of observed changes. Although the Wilcoxon signed-rank test and the Sign test operate similarly, the choice between them depends on the data characteristics. The Wilcoxon signed-rank test is preferable for differences that are approximately normally distributed and have meaningful magnitudes, while the Sign test is more appropriate in other cases. The \textcolor{purple}{S}ign test is implemented using the null and alternative hypotheses:
 \begin{equation}
 \begin{array}{rl}
-    H_0 : & \mathrm{The\ signs\ of\ +\ and\ -\ of\ differences\ are\ of\ equal\ size} \\
-    H_1 : & \mathrm{The\ signs\ of\ +\ and\ -\ of\ differences\ are\ not\ of\ equal\ size}
+	H_0 : & \mathrm{The\ signs\ of\ +\ and\ -\ of\ differences\ are\ of\ equal\ size} \\
+	H_1 : & \mathrm{The\ signs\ of\ +\ and\ -\ of\ differences\ are\ not\ of\ equal\ size}
 \end{array}
 \end{equation}
 
 The sign test utilizes the test statistic
 \begin{equation}
-    Z = \frac{(2S - n)\sqrt{n}}{n}
+	Z = \frac{(2S - n)\sqrt{n}}{n}
 \end{equation}
 where $n$ is the total number of signs, ignoring 0s, and $S$ the number of less frequent signs.
 
@@ -74,13 +74,13 @@ McNemar's test is a non-parametric test used to analyze paired nominal data. It 
 \begin{table}[ht]
 \centering
 \begin{tabular}{ |c|c|c|c| } 
-    \hline
-     & Post: Yes & Post: No & Total \\
-    \hline
-    Pre: Yes & a & b & a+b \\ 
-    Pre: No & c & d & c+d \\
-    Total & a+c & b+d & n \\
-    \hline
+	\hline
+	 & Post: Yes & Post: No & Total \\
+	\hline
+	Pre: Yes & a & b & a+b \\ 
+	Pre: No & c & d & c+d \\
+	Total & a+c & b+d & n \\
+	\hline
 \end{tabular}
 \caption{McNemar Contingency Table}
 \label{tab:mcnemar}
@@ -89,22 +89,22 @@ McNemar's test is a non-parametric test used to analyze paired nominal data. It 
 We use \cref{tab:mcnemar} to calculate the $\chi^2$ goodness-of-fit statistic with the following null and alternative hypotheses:
 \begin{equation}
 \begin{array}{c}
-    H_0: P_b = P_c   \\
-    H_1: P_b \neq P_c  
+	H_0: P_b = P_c   \\
+	H_1: P_b \neq P_c  
 \end{array}
 \end{equation}
 where \(H_0\) is the null hypothesis stating that the two marginal probabilities, $P_b$ and $P_c$, for each outcome are the same, and \(H_1\) is the alternative stating otherwise.
 
 McNemar's test utilizes the $\chi^2$ statistic:
 \begin{equation}
-    \chi^2 = \frac{(b-c)^2}{(b + c)}
+	\chi^2 = \frac{(b-c)^2}{(b + c)}
 \end{equation}
 
 \subsubsection{Pearson Correlation Coefficient}
 \hfill \break
 The Pearson correlation coefficient is a measure representing the strength of association between two variables and the direction of the relationship. It produces a value between -1 and +1, serving as a descriptive statistic. A value nearing +1 suggests that a change in one variable will lead to a similar directional change in the other, whereas a value approaching -1 indicates that altering one variable results in a change in the opposite direction for the other. We obtain the Pearson correlation coefficient $r$ using the formula:
 \begin{equation}
-     r = \frac{\sum((x_i - \Bar{x})(y_i - \Bar{y}))}{\sqrt{\sum(x_i - \Bar{x})^2\sum(y_i - \Bar{y})^2}}
+	 r = \frac{\sum((x_i - \Bar{x})(y_i - \Bar{y}))}{\sqrt{\sum(x_i - \Bar{x})^2\sum(y_i - \Bar{y})^2}}
 \end{equation}
 where $x_i$ is the value of the $i^\mathrm{th}$ predictor in a sample, $\bar{x}$ is the mean of the values of the predictor variable, $y_i$ is the value of the $i^\mathrm{th}$ response in a sample, and $\bar{y}$ the mean of the values of the response variable.
 
@@ -113,26 +113,26 @@ where $x_i$ is the value of the $i^\mathrm{th}$ predictor in a sample, $\bar{x}$
 The simple linear regression is a statistical method to evaluate the relationship between a predictor variable and a response variable by finding the equation of a ``best-fit'' line that minimizes the sum of squared residuals between it and the data. It estimates the nature of the relationship, either positive or negative, and the expected change in the response based on a change in the predictor. A one-sample $t$-test is applied to the slope to determine if said relationship is statistically significant given the following null and alternative hypotheses:
 \begin{equation}
 \begin{array}{c}
-    H_0: \beta_1 = 0 \\
-    H_1: \beta_1 \neq 0
+	H_0: \beta_1 = 0 \\
+	H_1: \beta_1 \neq 0
 \end{array}
 \end{equation}
-where \(H_0\) is the null hypothesis stating that there is  no relationship between outcome and predictor,  \(H_1\) is the alternative stating otherwise, and $\beta_1$ is the slope of the ``best-fit'' line given by
+where \(H_0\) is the null hypothesis stating that there is no relationship between outcome and predictor, \(H_1\) is the alternative stating otherwise, and $\beta_1$ is the slope of the ``best-fit'' line given by
 \begin{equation}
-    \hat{y} = \beta_0 + \beta_1x
+	\hat{y} = \beta_0 + \beta_1x
 \end{equation}
-where \(\hat{y}\) is the expected value of response; \(\beta_0\) is the intercept, i.e the expected value of response when the predictor is 0; \(\beta_1\) is the slope coefficient, i.e the average change in the response given a unit increase in the predictor; and $x$ is the value of predictor.
+where \(\hat{y}\) is the expected value of response; \(\beta_0\) is the intercept, i.e\textcolor{purple}{.} the expected value of response when the predictor is 0; \(\beta_1\) is the slope coefficient, i.e\textcolor{purple}{.} the average change in the response given a unit increase in the predictor; and $x$ is the value of predictor.
 
 The linear regression $t$-test utilizes the $t$-statistic
 \begin{equation}
-    t=\frac{r\sqrt{n-2}}{\sqrt{1-r^2}}
+	t=\frac{r\sqrt{n-2}}{\sqrt{1-r^2}}
 \end{equation}
 where $r$ is the Pearson correlation coefficient and $n$ is the number of data points $(x,y)$. Note that this $t$-statistic has a $t$-distribution with $n-2$ degrees of freedom if the null hypothesis is true.
 
 In this study, regression analysis was implemented at two levels:
 \begin{itemize}
-    \item At the individual customer level, investigating the relationship between average monthly electricity consumption for a specific user, the predictor, and various survey question responses; and
-    \item At the community level, investigating the relationship between predictor variables of mini-grid PV system capacity, total number of customers in the community, and total mini-grid capital expenditure (CAPEX), and various aggregated survey question responses. For the purposes of this paper, ``mini-grid PV system capacity,'' or simply ``mini-grid capacity'' or ``PV Size'' represents the maximum amount of power that the solar panels can produce under ideal conditions (STC), usually given in units of kilowatt-peak (kWp). For example, a 10-kWp solar mini-grid would be expected to produce up to 10 kilowatts of power during peak sunlight conditions.
+	\item At the individual customer level, investigating the relationship between average monthly electricity consumption for a specific user, the predictor, and various survey question responses; and
+	\item At the community level, investigating the relationship between predictor variables of mini-grid PV system capacity, total number of customers in the community, and total mini-grid capital expenditure (CAPEX), and various aggregated survey question responses. For the purposes of this paper, ``mini-grid PV system capacity,'' or simply ``mini-grid capacity'' or ``PV Size'' represents the maximum amount of power that the solar panels can produce under ideal conditions (STC), usually given in units of kilowatt-peak (kWp). For example, a 10-kWp solar mini-grid would be expected to produce up to 10 kilowatts of power during peak sunlight conditions.
 \end{itemize}
 
 For ordinal variables with three levels such as -1, 0, and 1, additional transformations were carried out to determine a pertinent response variable. First, the proportion for the level of interest (e.g., ``1'' to denote an increase in schooling for girls) was obtained for each site and then multiplied by the total number of customers for the relevant customer type (e.g., households, schools, businesses, etc.) depending on the response variable.
@@ -141,14 +141,14 @@ For ordinal variables with three levels such as -1, 0, and 1, additional transfo
 \hfill \break
 The likelihood-ratio test is a statistical method used to assess the significance of a predictor variable in the context of logistic regression, which models the relationship between a binary response variable and a ratio predictor variable. Logistic regression predicts the log odds of the occurrence of an event by fitting data to a logistic curve. This study considers only the case of simple binary logistic regressions in which the data are fitted in a probabilistic sense to a function of the form:
 \begin{equation}
-    p(x)=\frac{1}{1+\mathrm{exp}(-t)}
+	p(x)=\frac{1}{1+\mathrm{exp}(-t)}
 \end{equation}
 
 The likelihood-ratio test compares the goodness-of-fit of two models: one ``full model'' that includes the predictor variable (i.e. $t=\beta_0+\beta_1x$) and one ``reduced model'' that does not (i.e. $t=\beta_0$). The test evaluates whether the inclusion of the predictor significantly improves the model. The null hypothesis for this test is that the predictor variable has no effect, and the reduced model is sufficient. The alternative hypothesis for this test is that the predictor variable has a significant effect, and the full model is more appropriate.
 
 In logistic regression, the likelihood of observing the given data is maximized, and the test statistic is calculated as:
 \begin{equation}
-    D = -2 \ln\left(\frac{\text{Likelihood of reduced model given the data}}{\text{Likelihood of full model given the data}}\right)
+	D = -2 \ln\left(\frac{\text{Likelihood of reduced model given the data}}{\text{Likelihood of full model given the data}}\right)
 \end{equation}
 
 This test statistic follows approximately a $\chi^2$ distribution with degrees of freedom equal to the difference in the number of parameters between the full and reduced models. The decision about the significance of the predictor variable is made based on the $p$-value obtained from this $\chi^2$ distribution.
