@@ -1,5 +1,4 @@
 \documentclass[12pt]{iopart}
-\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
 %Uncomment next line if AMS fonts required
 %\usepackage{iopams}
 
@@ -28,6 +27,11 @@
 \usepackage[capitalize]{cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
 
+% Conditionals for if the paper needs to be anonymous
+\usepackage{etoolbox}
+\newtoggle{anonymous}
+\togglefalse{anonymous}
+
 % Widths of Appendix Table Columns
 \newcommand{\cwV}{3.2cm}
 \newcommand{\cwS}{1.7cm}
@@ -46,15 +50,16 @@
 
 \title[]{Social and Economic Impact Analysis of Solar Mini-Grids in Rural Africa: A Cohort Study from Kenya and Nigeria}
 
-% Uncomment after double-blind review
-\author{A.T. Carabajal$^1$, A. Orsot$^2$, M.P.E. Moudio$^3$, T. Haggai$^4$, C.J. Okonkwo$^5$, G.T. Jarrard III$^1$, and N.S. Selby$^2$}
-\address{$^1$Renewvia Energy Corporation, 2951 Flowers Rd. S., Suite 217, Atlanta, GA 30341}
-\address{$^2$Renewvia Solar Ethiopia PLC, Addis Ababa, Ethiopia, Bole sub-city, Woreda 03, House No. 174/175, Saya Building, 5th Floor}
-\address{$^3$Department of Industrial Engineering and Operations Research, UC Berkeley, 2521 Hearst Ave, Berkeley, CA, USA, 94709}
-\address{$^4$Department of Anthropology, Gender and African Studies, University of Nairobi, PR98+JC9 University Way, Nairobi}
-\address{$^5$Planetary Health Management Mission Pathway, Entrepreneurial Leadership Program, Africa Leadership University Rwanda Campus,
-Bumbogo, Kigali, Innovation City, Kigali, Rwanda}
-\ead{\mailto{nicholas.selby@renewvia.com}}
+\iftoggle{anonymous}{}{
+	\author{A.T. Carabajal$^1$, A. Orsot$^2$, M.P.E. Moudio$^3$, T. Haggai$^4$, C.J. Okonkwo$^5$, G.T. Jarrard III$^1$, and N.S. Selby$^2$}
+	\address{$^1$Renewvia Energy Corporation, 2951 Flowers Rd. S., Suite 217, Atlanta, GA 30341}
+	\address{$^2$Renewvia Solar Ethiopia PLC, Addis Ababa, Ethiopia, Bole sub-city, Woreda 03, House No. 174/175, Saya Building, 5th Floor}
+	\address{$^3$Department of Industrial Engineering and Operations Research, UC Berkeley, 2521 Hearst Ave, Berkeley, CA, USA, 94709}
+	\address{$^4$Department of Anthropology, Gender and African Studies, University of Nairobi, PR98+JC9 University Way, Nairobi}
+	\address{$^5$Planetary Health Management Mission Pathway, Entrepreneurial Leadership Program, Africa Leadership University Rwanda Campus,
+	Bumbogo, Kigali, Innovation City, Kigali, Rwanda}
+	\ead{\mailto{nicholas.selby@renewvia.com}}
+}
 \vspace{10pt}
 \begin{indented}
 \item[]December 2023
@@ -86,8 +91,10 @@ Bumbogo, Kigali, Innovation City, Kigali, Rwanda}
 \input{sections/discussion}
 \input{sections/conclusion}
 
-\input{sections/coi}
-\input{sections/funding}
+\iftoggle{anonymous}{}{
+	\input{sections/coi}
+	\input{sections/funding}
+}
 \input{sections/data}
 
 \section*{References}
