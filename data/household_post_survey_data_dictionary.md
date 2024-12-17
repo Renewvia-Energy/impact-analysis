@@ -133,9 +133,9 @@
 - `minigrid_effect_on_household_female`: Impact on female household members
 
 ## Consumption and Payment Metrics
-- `Sum.of.kWh.Consumed.x`: Total kilowatt-hours consumed (first measure)
-- `Total.Payment..Local.`: Total payments in local currency
-- `avg_mon_consumption_period`: Average monthly consumption during period
-- `Sum.of.kWh.Consumed.y`: Total kilowatt-hours consumed (second measure)
-- `Sum.of.Net.Payment.Amount..Local.`: Net payment amount in local currency
-- `avg_mon_consumption_cum`: Cumulative average monthly consumption
+- `Sum.of.kWh.Consumed.x`: Total kilowatt-hours consumed during specific pre-post survey period
+- `Total.Payment..Local.`: Total payments in local currency (Naira or Ksh)
+- `avg_mon_consumption_period`: Average monthly consumption during specific pre-post survey period
+- `Sum.of.kWh.Consumed.y`: Total kilowatt-hours consumed all periods until report date
+- `Sum.of.Net.Payment.Amount..Local.`: Net payment amount in local currency (Naira or Ksh)
+- `avg_mon_consumption_cum`: Average monthly consumption all periods until report date
