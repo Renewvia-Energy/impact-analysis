@@ -1,7 +1,7 @@
 # impact-analysis
 Data, analysis, and writing related to socioeconomic analysis of rural African mini-grids.
 
-Please check out our paper published in [Environmental Research: Infrastructure and Sustainability]([https://arxiv.org/abs/2401.02445](https://iopscience.iop.org/article/10.1088/2634-4505/ad4ffb))!
+Please check out our paper published in [Environmental Research: Infrastructure and Sustainability](https://iopscience.iop.org/article/10.1088/2634-4505/ad4ffb)!
 
 The anonymized data used in the paper can be found in the [data](https://github.com/Renewvia-Energy/impact-analysis/tree/main/data) directory.
 
