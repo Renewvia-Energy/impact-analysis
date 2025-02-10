@@ -1,0 +1,386 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This is a (brief) model paper using the achemso class
+%% The document class accepts keyval options, which should include
+%% the target journal and optionally the manuscript type.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal=jacsat,manuscript=article]{achemso}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional packages needed here.  Only include packages
+%% which are essential, to avoid problems later.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{chemformula} % Formula subscripts using \ch{}
+\usepackage[T1]{fontenc} % Use modern font encodings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If issues arise when submitting your manuscript, you may want to
+%% un-comment the next line.  This provides information on the
+%% version of every file you have used.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\listfiles
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional macros here.  Please use \newcommand* where
+%% possible, and avoid layout-changing macros (which are not used
+%% when typesetting).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*\mycommand[1]{\texttt{\emph{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Meta-data block
+%% ---------------
+%% Each author should be given as a separate \author command.
+%%
+%% Corresponding authors should have an e-mail given after the author
+%% name as an \email command. Phone and fax numbers can be given
+%% using \phone and \fax, respectively; this information is optional.
+%%
+%% The affiliation of authors is given after the authors; each
+%% \affiliation command applies to all preceding authors not already
+%% assigned an affiliation.
+%%
+%% The affiliation takes an option argument for the short name.  This
+%% will typically be something like "University of Somewhere".
+%%
+%% The \altaffiliation macro should be used for new address, etc.
+%% On the other hand, \alsoaffiliation is used on a per author basis
+%% when authors are associated with multiple institutions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Brock J. Pace}
+\author{Sophia J. Wu}
+\author{Xiaobo Ren}
+\author{Bokyoung Won}
+\affiliation[Unknown University]
+{Georgia Institute of Technology, Atlanta, Georgia, 30332, United States}
+\author{Nicholas Stearns Selby}
+\email{nicholas.selby@renewvia.com}
+\affiliation[Renewvia]{Renewvia Solar Ethiopia PLC, Bole sub-city, Woreda 03, House No. 174/175, Saya Building, 5th Floor, Addis Ababa, Ethiopia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The document title should be given as usual. Some journals require
+%% a running title from the author: this should be supplied as an
+%% optional argument to \title.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[An \textsf{achemso} demo]
+  {Socioeconomic Impacts of Solar Mini-Grids on Educational Performance in Rural Kenya and Nigeria}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Some journals require a list of abbreviations or keywords to be
+%% supplied. These should be set up here, and will be printed after
+%% the title and author information, if needed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\abbreviations{IR,NMR,UV}
+\keywords{American Chemical Society, \LaTeX}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The manuscript does not need to include \maketitle, which is
+%% executed automatically.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The "tocentry" environment can be used to create an entry for the
+%% graphical table of contents. It is given here as some journals
+%% require that it is printed as part of the abstract page. It will
+%% be automatically moved as appropriate.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{tocentry}
+
+% Some journals require a graphical entry for the Table of Contents.
+% This should be laid out ``print ready'' so that the sizing of the
+% text is correct.
+
+% Inside the \texttt{tocentry} environment, the font used is Helvetica
+% 8\,pt, as required by \emph{Journal of the American Chemical
+% Society}.
+
+% The surrounding frame is 9\,cm by 3.5\,cm, which is the maximum
+% permitted for  \emph{Journal of the American Chemical Society}
+% graphical table of content entries. The box will not resize if the
+% content is too big: instead it will overflow the edge of the box.
+
+% This box and the associated title will always be printed on a
+% separate page at the end of the document.
+
+% \end{tocentry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The abstract environment will automatically gobble the contents
+%% if an abstract is not used by the target journal.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+This study demonstrates the effects of newly implemented solar mini-grids on education in rural areas of Africa, specifically in Kenya and Nigeria. Analyzing survey data collected from households in areas where solar mini-grids have been introduced, this study explores the relationship between solar mini-grids and educational performance. Through machine learning, key socioeconomic variables, such as home lighting, economic activity, and household stability, are shown to significantly influence school performance. These findings show that the benefits of solar mini-grids include extended study hours enabled by reliable lighting, enhanced security, improved household economic stability, and better living conditions overall. These changes create an ideal environment for educational growth, emphasizing the impacts of energy access on quality of life. These findings highlight the need for the current and future implementation of energy projects to improve communities.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start the main part of the manuscript here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Energy is essential to maintaining daily life and is a fundamental driver of socioeconomic development. Among energy sources, electricity plays a critical role in improving quality of life and supporting social and economic progress. However, in rural areas, electricity supply is often difficult to access, creating a persistent challenge that lowers both quality of life and socioeconomic development. Sub-Saharan Africa faces a significant energy deficit, with only 45 percent of the population having access to electricity. The majority of those without access live in rural areas due to several factors, including lack of financial ability to extend the main power grid; low population density, making traditional grid extension not cost-effective; and social factors that limit the adoption of electrification projects.\cite{Zebra2021}
+
+As a result, the lack of reliable electricity hinders progress in critical areas such as education, healthcare, and income generation, perpetuating poverty and limiting development opportunities.\cite{owid-energy-access} Bridging this energy gap is vital to empower these regions and enable them to thrive.
+
+Solar mini-grids offer a promising solution by providing decentralized, reliable, and sustainable energy systems tailored to the needs of rural communities. These systems not only enhance access to electricity, but also act as catalysts for broader social and economic transformation. Mini-grids have demonstrated the potential to improve education, healthcare, and economic productivity in off-grid areas.\cite{Torero2015} However, challenges remain in fully understanding and maximizing their impact, particularly regarding subgroup specific outcomes such as household-level socioeconomic changes and education.
+
+The pressing need for sustainable, scalable, and impactful energy solutions in developing countries has brought renewed interest in decentralized power systems, particularly solar mini-grids. While much of the existing literature has focused on energy access and economic outcomes, there is an emerging interest in understanding the indirect impacts of electrification projects, such as their influence on educational performance. In this study, we investigate the effects of solar mini-grids on school performance in rural Kenya and Nigeria, with a focus on understanding how improved energy access influences the broader household environment, subsequently affecting educational outcomes.
+
+In early 2024, an analysis was published on the socioeconomic impact on solar mini-grids in rural African communities. The analysis focuses on rural households, schools, businesses, and healthcare facilities in Kenya and Nigeria connected to solar mini-grids.\cite{Carabajal2024} The study analyzed data from many households and businesses, revealing improvements in their quality of life. Part of the study examined the educational impacts of mini-grids, highlighting their ability to increase school enrollment rates, extend study hours, and enhance academic performance, with 46 percent of households reporting positive changes in children's education and 92 percent of schools observing better outcomes due to reliable electricity. However, their analysis did not identify the specific mechanisms by which mini-grids affect academic performance. Using their open-source dataset, we employ machine learning techniques to uncover key variables that influence educational outcomes in communities with solar mini-grids, providing insight into the causal relationships between energy access and academic achievement. Whereas Carabajal et al. showed \textit{that} mini-grids improved educational outcomes, we explain \textit{how} by identifying and analyzing the specific socioeconomic mechanisms that drive these improvements.
+
+\section{Results and Discussion}
+In analyzing this data, we prioritize subgroup analysis using key variables such as home lighting, economic activity, and household stability that significantly influence educational outcomes. Focusing on eduction highlights the transformative potential of solar mini-grids in addressing critical gaps in rural electrification and its direct and indirect impacts on socioeconomic development.
+
+All text variables from the survey responses were excluded, except those related to changes in school performance. Variables with binary responses (e.g., yes / no) were converted to binary variables, those with ordinal responses (e.g., I / N / D) were categorized into ordinal variables, and numeric values retained their original value. We capped categories that were answered in a range (e.g., 100-200, 500-1000) with their upper limits (e.g., 200, 1000). Principal component analysis (PCA) reduces the dataset to 26 core components.
+
+To identify key predictors for school performance changes, we employed Recursive Feature Elimination (RFE), supported by five models: logistic regression (ridge and lasso), random forest, gradient boosting, and SVM. While all five models provided us with similar predictive power and performance, logistic regression slightly outperformed other models. These results can be seen in Table~\ref{tbl:model_analysis}.
+\begin{center}
+\begin{table}
+    \caption{Model Analysis}
+    \label{tbl:model_analysis}
+    \resizebox{\columnwidth}{!}{\begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        & Random Forest & Gradient Boosting & SVM & Logistic Regression (Ridge) & Logistic Regression (Lasso) \\
+        \hline
+        0 & 0.94 & 0.94 & 0.94 & 0.94 & 0.94 \\
+        \hline
+        1 & 0.60 & 0.64 & 0.60 & 0.66 & 0.66 \\
+        \hline
+        Recall & 0.891 & 0.891 & 0.896 & 0.900 & 0.900 \\
+        \hline
+        Precision & 0.882 & 0.885 & 0.888 & 0.895 & 0.895 \\
+        \hline
+        accuracy & 0.89 & 0.89 & 0.90 & 0.90 & 0.90 \\
+        \hline
+        macro avg & 0.77 & 0.79 & 0.77 & 0.80 & 0.80 \\
+        \hline
+        weighted avg & 0.88 & 0.89 & 0.89 & 0.90 & 0.90 \\
+        \hline
+    \end{tabular}}
+\end{table}
+\end{center}
+The models helped identify key variables that show a strong relationship with the dependent variable, including Presence of home exterior lights, Business Recent, Household Headcount Change, Total Energy Payment (Local), Appliance Count, Total Energy Consumption (kWh), Cooking Energy Source Unclean, and Performance Explain.
+
+To test variable significance, we conducted t-tests for numerical variables and chi-squared tests for categorical variables. This analysis identified seven predictors with statistically significant impacts on school performance: XXX 
+
+\subsection{Home Exterior Lights}
+This variable is strongly positively associated with improved school performance with a p-value of 0.000 and a coefficient of 1.3734. This may indicate the role of lighting in creating a stable or secure environment which would be conducive to studying. These findings corroborate evidence from India, where electrification led to increased educational attainment.\cite{Aklin2017}
+
+\subsection{Business Recent}
+This variable is shown to be strongly associated with improved school performance with a p-value of 0.000 and a coefficient of 1.0648. This result suggests a positive association between recent business activity and children's educational performance changes. Households with recent business activity may reflect economic shifts impacting family resources and, consequently, children's school performance. This aligns with other studies that demonstrate that electrification plays a highly beneficial role on economic status as well as education and show that the two are linked.\cite{Escap2021}
+
+\subsection{Household Headcount Change}
+This variable is shown to be strongly negatively associated with improved school performance with a p-value of 0.000 and a coefficient of -2.1347. Households showing and increased instability reflect a reduced likelihood of school performance improvements. This supports findings that household instability has a significantly negative effect on educational attainment.\cite{Perkins2019}
+
+\subsection{Cooking Energy Source (Unclean)}
+This variable is shown to be strongly positively associated with improved school performance with a p-value of 0.000 and a coefficient of 1.3679. This suggests that unclean cooking energy sources are associated with a higher likelihood of school performance change, possibly reflecting households under economic or health strain.
+
+\subsection{Performance Explain}
+This variable is shown to be strongly positively associated with improved school performance with a p-value of 0.000 and a coefficient of 1.3495. A strong positive association indicates that households with higher performance-explain scores (satisfaction or expectations) are more likely to experience school performance changes. 
+
+\subsection{Total Energy Payment (Local)}
+This variable is shown to be negatively associated with improved school performance with a p-value of 0.0018 and a coefficient of -0.0000. This shows that there is a small but significant inverse relationship, suggesting that higher energy payments are slightly associated with reduced odds of a school performance change.
+
+\subsection{Appliance Count}
+This variable is shown to be positively associated with improved school performance with a p-value of 0.0432 and a coefficient of 0.0340. This suggests that each additional appliance slightly increases the likelihood of a performance change. More appliances might reflect better home conditions, which could support children's education.
+
+The first step in this analysis is feature selection. To select features, we used a technique called Recursive Feature Elimination (RFE), which helps systematically identify the most important features from a larger set by repeatedly training the model. The charts above represent the top features for Kenya and Nigeria. This feature importance illustrates how much each factor contributes to predicting school performance, which reflects educational improvement.
+
+The result indicates that Mini-grid project impact the education directly and indirectly in local community. For example, the Those Significant predictors such as Home Exterior Lights and light hours current show how Mini-grid provided the stable energy supply and more access to light. Other predicators, like Business Recent, Cooking Energy Source (Unclean), and Household Headcount Change, highlight factors in the household environment that influence school performance. Mini-grid help to improve the economic stability (business activity), home security (exterior lights), and household stability (headcount), which all play substantial roles in supporting children's education outcomes. After reviewing the results from all the models, we decide to move forward with the following variable and test the significance level:
+
+Home Exterior Lights, Chi-square statistic: 119.73, p-value: 0.000 (significant), Interpretation: The result indicates an association between having home exterior lights and changes in children's school performance. Households with exterior lighting may offer additional stability or security, contributing to performance changes. Business Recent, Chi-square statistic: 299.94, p-value: 0.000 (significant), Interpretation: This result suggests an association between recent business activity and children's performance changes. Households with recent business activity may reflect economic shifts impacting family resources and, consequently, children's school performance. Cooking Energy Source (Unclean), Chi-square statistic: 107.4, p-value: 0.000 (significant), Interpretation: This result suggests an association between Cooking Energy Source and children's performance changes. Community Lights, Chi-square statistic: 104.35, p-value: 0.000 significant), Interpretation; This result suggests an association between Community Lights and children's performance changes.Total Energy Payment (local), t-statistic: 5.15, p-value 0.000 (significant), Interpretation: The significant p-value and positive t-statistic indicate that households with a change in children's school performance tend to have higher energy payments on average compared to those without a change. Total Energy Consumption (kWh), t-statistic: 0.25, p-value: 0.804 (not significant), interpretation: There is no significant difference in total energy consumption between households with and without a change in school performance. This suggests that energy consumption does not have a meaningful impact on school performance change in this sample. Appliance Count, t-statistic: -2.27, p-value: 0.024 (significant), Interpretation: The significant p-value and negative t-statistic indicate that households without a change in school performance tend to have a higher appliance count on averahge. This suggests that households with more appliances may provide a more stable environment for children. Performance Explain, U-statistic: 158221.5, p-value: 0.000 (significant), Interpretation: This result suggests an association between Performance Explain and children's performance changes. Household Headcount Change, U-statistic: 32704, p-value: 0.000 (significant), Interpretation: This result suggests an association between Household Headcount Change and children's performance changes.
+
+Intercept, Coefficient: -4.0512, p-value: 0.0000 (highly significant), interpretation: The negative intercept suggests a low baseline likelihood of a change in children's school performance when all predictors are at zero. Total Energy Payment (Local), Coefficient: -0.0000, p-value: 0.0018 (significant), Interpretation: There is a small but significant inverse relationship, suggesting that higher energy payments are slightly associated with reduced odds of a school performance change. Total 
+Energy Consumption (kWh), Coefficient: 0.0009, p-value: 0.1778 (not significant), Interpretation: This positive coefficient is not statistically significant, indicating no meaningful association between energy consumption and changes in school performance. Appliance Count, Coefficient: 0.0340, p-value: 0.0432 (significant), Interpretation: A positive association, suggesting that each additional appliance slightly increases the likelihood of a performance change. More appliances might reflect better home conditions, which could support children's education. Home Exterior Lights, Coefficient: 1.3734, p-value: 0.0000 (highly significant), Interpretation: Strongly associated with increased odds of school performance change, possibly indicating that households with exterior lights (a proxy for security or stability) support better educational outcomes. Business Recent, Coefficient: 1.0648, p-value: 0.000 (highly significant), Interpretation: Recent business activity in the household is associated with a higher likelihood of performance change, suggesting economic activity may positively impact the household environment for education. Cooking Energy Source (Unclean), Coefficient: 1.3679, p-value: 0.0000 (hightly significant), Interpretation: A significant positive relationship, suggesting that unclean cooking energy sources are associated with a higher likelihood of school performance change, possibly reflecting households under economic or health strain. Community Lights, Coeffiecient: 0.5356, p-value: 0.0022 (significant), Interpretation: This positive relationship suggests that community lighting is associated with improved odds of school performance change, likely due to better study environments. Performance Explain, Coefficient: 1.3495, pvalue: 0.0000 (highly significant), Interpretation: A strong positive association indicates that households with higher performance-explain scores (satisfaction or expectations) are more likely to experience school performance changes. Household Headcount Change, Coefficient: -2.1347, p-value: 0.0000 (highly significant), Interpretation: A negative association suggests that households with headcount changes (possibly indicating instability) are less likely to see positive school performance changes.
+
+Significant predictors in the model, such as Home Exterior Lights, Business Recent, Cooking Energy Source (Unclean), and Household Headcount Change, highlight factors in the household environment that influence school performance. Economic stability (business activity), home security (exterior lights), and household stability (headcount) all play substantial roles in supporting children's education outcomes.
+
+% \subsection{References}
+
+% The class makes various changes to the way that references are
+% handled.  The class loads \textsf{natbib}, and also the
+% appropriate bibliography style.  References can be made using
+% the normal method; the citation should be placed before any
+% punctuation, as the class will move it if using a superscript
+% citation style
+% \cite{Mena2000,Abernethy2003,Friedman-Hill2003,EuropeanCommission2008}.
+% The use of \textsf{natbib} allows the use of the various citation
+% commands of that package: \citeauthor{Abernethy2003} have shown
+% something, in \citeyear{Cotton1999}, or as given by
+% Ref.~\citenum{Mena2000}.  Long lists of authors will be
+% automatically truncated in most article formats, but not in
+% supplementary information or reviews \cite{Pople2003}. If you
+% encounter problems with the citation macros, please check that
+% your copy of \textsf{natbib} is up to date. The demonstration
+% database file \texttt{achemso-demo.bib} shows how to complete
+% entries correctly. Notice that ``\latin{et al.}'' is auto-formatted
+% using the \texttt{\textbackslash latin} command.
+
+% Multiple citations to be combined into a list can be given as
+% a single citation.  This uses the \textsf{mciteplus} package
+% \cite{Johnson1972,*Arduengo1992,*Eisenstein2005,*Arduengo1994}.
+% Citations other than the first of the list should be indicated
+% with a star. If the \textsf{mciteplus} package is not installed,
+% the standard bibliography tools will still work but starred
+% references will be ignored. Individual references can be referred
+% to using \texttt{\textbackslash mciteSubRef}:
+% ``ref.~\mciteSubRef{Eisenstein2005}''.
+
+% The class also handles notes to be added to the bibliography.  These
+% should be given in place in the document \bibnote{This is a note.
+% The text will be moved the the references section.  The title of the
+% section will change to ``Notes and References''.}.  As with
+% citations, the text should be placed before punctuation.  A note is
+% also generated if a citation has an optional note.  This assumes that
+% the whole work has already been cited: odd numbering will result if
+% this is not the case \cite[p.~1]{Cotton1999}.
+
+% \subsection{Floats}
+
+% New float types are automatically set up by the class file.  The
+% means graphics are included as follows (Scheme~\ref{sch:example}).  As
+% illustrated, the float is ``here'' if possible.
+% \begin{scheme}
+%   Your scheme graphic would go here: \texttt{.eps} format\\
+%   for \LaTeX\, or \texttt{.pdf} (or \texttt{.png}) for pdf\LaTeX\\
+%   \textsc{ChemDraw} files are best saved as \texttt{.eps} files:\\
+%   these can be scaled without loss of quality, and can be\\
+%   converted to \texttt{.pdf} files easily using \texttt{eps2pdf}.\\
+%   %\includegraphics{graphic}
+%   \caption{An example scheme}
+%   \label{sch:example}
+% \end{scheme}
+
+% \begin{figure}
+%   As well as the standard float types \texttt{table}\\
+%   and \texttt{figure}, the class also recognises\\
+%   \texttt{scheme}, \texttt{chart} and \texttt{graph}.
+%   \caption{An example figure}
+%   \label{fgr:example}
+% \end{figure}
+
+% Charts, figures and schemes do not necessarily have to be labelled or
+% captioned.  However, tables should always have a title. It is
+% possible to include a number and label for a graphic without any
+% title, using an empty argument to the \texttt{\textbackslash caption}
+% macro.
+
+% The use of the different floating environments is not required, but
+% it is intended to make document preparation easier for authors. In
+% general, you should place your graphics where they make logical
+% sense; the production process will move them if needed.
+
+% \subsection{Math(s)}
+
+% The \textsf{achemso} class does not load any particular additional
+% support for mathematics.  If packages such as \textsf{amsmath} are
+% required, they should be loaded in the preamble.  However,
+% the basic \LaTeX\ math(s) input should work correctly without
+% this.  Some inline material \( y = mx + c \) or $ 1 + 1 = 2 $
+% followed by some display. \[ A = \pi r^2 \]
+
+% It is possible to label equations in the usual way (Eq.~\ref{eqn:example}).
+% \begin{equation}
+%   \frac{\mathrm{d}}{\mathrm{d}x} \, r^2 = 2r \label{eqn:example}
+% \end{equation}
+% This can also be used to have equations containing graphical
+% content. To align the equation number with the middle of the graphic,
+% rather than the bottom, a minipage may be used.
+% \begin{equation}
+%   \begin{minipage}[c]{0.80\linewidth}
+%     \centering
+%     As illustrated here, the width of \\
+%     the minipage needs to allow some  \\
+%     space for the number to fit in to.
+%     %\includegraphics{graphic}
+%   \end{minipage}
+%   \label{eqn:graphic}
+% \end{equation}
+
+% \section{Experimental}
+
+% The usual experimental details should appear here.  This could
+% include a table, which can be referenced as Table~\ref{tbl:example}.
+% Notice that the caption is positioned at the top of the table.
+% \begin{table}
+%   \caption{An example table}
+%   \label{tbl:example}
+%   \begin{tabular}{ll}
+%     \hline
+%     Header one  & Header two  \\
+%     \hline
+%     Entry one   & Entry two   \\
+%     Entry three & Entry four  \\
+%     Entry five  & Entry five  \\
+%     Entry seven & Entry eight \\
+%     \hline
+%   \end{tabular}
+% \end{table}
+
+% Adding notes to tables can be complicated.  Perhaps the easiest
+% method is to generate these using the basic
+% \texttt{\textbackslash textsuperscript} and
+% \texttt{\textbackslash emph} macros, as illustrated (Table~\ref{tbl:notes}).
+% \begin{table}
+%   \caption{A table with notes}
+%   \label{tbl:notes}
+%   \begin{tabular}{ll}
+%     \hline
+%     Header one                            & Header two \\
+%     \hline
+%     Entry one\textsuperscript{\emph{a}}   & Entry two  \\
+%     Entry three\textsuperscript{\emph{b}} & Entry four \\
+%     \hline
+%   \end{tabular}
+
+%   \textsuperscript{\emph{a}} Some text;
+%   \textsuperscript{\emph{b}} Some more text.
+% \end{table}
+
+% The example file also loads the optional \textsf{mhchem} package, so
+% that formulas are easy to input: \texttt{\textbackslash ch\{H2SO4\}}
+% gives \ch{H2SO4}.  See the use in the bibliography file (when using
+% titles in the references section).
+
+% The use of new commands should be limited to simple things which will
+% not interfere with the production process.  For example,
+% \texttt{\textbackslash mycommand} has been defined in this example,
+% to give italic, mono-spaced text: \mycommand{some text}.
+
+% \section{Extra information when writing JACS Communications}
+
+% When producing communications for \emph{J.~Am.\ Chem.\ Soc.}, the
+% class will automatically lay the text out in the style of the
+% journal. This gives a guide to the length of text that can be
+% accommodated in such a publication. There are some points to bear in
+% mind when preparing a JACS Communication in this way.  The layout
+% produced here is a \emph{model} for the published result, and the
+% outcome should be taken as a \emph{guide} to the final length. The
+% spacing and sizing of graphical content is an area where there is
+% some flexibility in the process.  You should not worry about the
+% space before and after graphics, which is set to give a guide to the
+% published size. This is very dependant on the final published layout.
+
+% You should be able to use the same source to produce a JACS
+% Communication and a normal article.  For example, this demonstration
+% file will work with both \texttt{type=article} and
+% \texttt{type=communication}. Sections and any abstract are
+% automatically ignored, although you will get warnings to this effect.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% The "Acknowledgement" section can be given in all manuscript
+% %% classes.  This should be given within the "acknowledgement"
+% %% environment, which will make the correct section or running title.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{acknowledgement}
+
+% The authors thank Dr. Nicholas Selby for his work on the original study and for his continued support in the content of this letter.
+
+% \end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The appropriate \bibliography command should be placed here.
+%% Notice that the class file automatically sets \bibliographystyle
+%% and also names the section correctly.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{main}
+\end{document}
